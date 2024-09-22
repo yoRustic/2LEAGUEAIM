@@ -196,41 +196,5 @@ namespace Script_Engine.Utilities
 				Console.Write("\x1b[38;2;" + color.R + ";" + color.G + ";" + color.B + "m");
 			}
 		}
-		public static class Events
-		{
-			public static bool LoaderOpened()
-			{
-				using HttpClient hc = new(new HttpClientHandler() { Proxy = null, UseProxy = false });
-				hc.DefaultRequestHeaders.UserAgent.ParseAdd($"LEAGUEAIM/{Settings.Product.Version}");
-				hc.BaseAddress = new Uri(Settings.API.BaseUri);
-				var content = new FormUrlEncodedContent(new[]
-				{
-				new KeyValuePair<string, string>("FUNC", "loaderOpened"),
-			});
-				var result = hc.PostAsync("/x-api/api.php", content);
-				string responseInString = result.Result.Content.ReadAsStringAsync().Result;
-				hc.Dispose();
-
-				return (responseInString == "200");
-			}
-			public static bool UserLoggedIn()
-			{
-				using HttpClient hc = new(new HttpClientHandler() { Proxy = null, UseProxy = false });
-				hc.DefaultRequestHeaders.UserAgent.ParseAdd($"LEAGUEAIM/{Settings.Product.Version}");
-				hc.BaseAddress = new Uri(Settings.API.BaseUri);
-				var content = new FormUrlEncodedContent(new[]
-				{
-				new KeyValuePair<string, string>("FUNC", "userLoggedIn"),
-				new KeyValuePair<string, string>("USER_ID", Program._XFUser.UserId.ToString()),
-				new KeyValuePair<string, string>("USER_NAME", Program._XFUser.Username),
-				new KeyValuePair<string, string>("USER_HWID", Program._XFUser.Fields[0].Value),
-			});
-				var result = hc.PostAsync("/x-api/api.php", content);
-				string responseInString = result.Result.Content.ReadAsStringAsync().Result;
-				hc.Dispose();
-
-				return (responseInString == "200");
-			}
-		}
 	}
 }

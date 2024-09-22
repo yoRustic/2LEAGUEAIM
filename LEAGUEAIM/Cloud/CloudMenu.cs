@@ -443,9 +443,6 @@ namespace Script_Engine.Cloud
 			if (entry.Name != "No files found")
 			{
 
-				if (entry.Author != Program._XFUser.Username)
-					ImGui.SetCursorPosX(ImGui.GetCursorPosX() + (ImGui.GetColumnWidth() - 24) / 4 + 2);
-
 				ImGui.PushFont(Fonts.IconsSm);
 
 				if (ImGui.Button(IconFonts.FontAwesome6.Download + "##" + entry.Type + entry.Id, new(24, 24)))

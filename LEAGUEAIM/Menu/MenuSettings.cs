@@ -270,39 +270,36 @@ namespace LEAGUEAIM
 				ImGui.PopStyleColor();
 				ImGui.PopStyleColor();
 
-				bool acct = true;
-				ImGui.SetNextWindowPos(new(cMenuPos.X + (cMenuSize.X / 2) - 175, cMenuPos.Y + (cMenuSize.Y / 2) - 55));
-				ImGui.SetNextWindowSize(new(350, 110));
-				ImGui.PushStyleColor(ImGuiCol.Border, Settings.Colors.AccentColor);
-				ImGui.PushStyleColor(ImGuiCol.PopupBg, Settings.Colors.BgColor);
-				ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, 1.5f);
-				if (ImGui.BeginPopupModal("Switch Account", ref acct, ImGuiWindowFlags.AlwaysAutoResize | ImGuiWindowFlags.NoDecoration | ImGuiWindowFlags.NoTitleBar))
-				{
-					ImGui.Spacing();
-					Drawing.TextCentered($"Are you sure you want to switch accounts?");
-					ImGui.Spacing();
-					ImGui.SetCursorPos(new Vector2((ImGui.GetWindowSize().X - 68) * 0.3f, ImGui.GetCursorPosY()));
-					if (ImGui.Button("Yes", new(68, 28)))
-					{
-						LoginHelper.SaveCredentials(string.Empty, string.Empty);
-						LoginHelper.IsSaved = false;
-						LoginHelper.IsReady = false;
-						Application.Restart();
-						Environment.Exit(0);
-					}
-					ImGui.SameLine();
-					ImGui.SetCursorPos(new Vector2((ImGui.GetWindowSize().X - 68) * 0.6f, ImGui.GetCursorPosY()));
-					if (ImGui.Button("No", new(68, 28)))
-					{
-						ImGui.CloseCurrentPopup();
-					}
-					ImGui.Spacing();
+				//bool acct = true;
+				//ImGui.SetNextWindowPos(new(cMenuPos.X + (cMenuSize.X / 2) - 175, cMenuPos.Y + (cMenuSize.Y / 2) - 55));
+				//ImGui.SetNextWindowSize(new(350, 110));
+				//ImGui.PushStyleColor(ImGuiCol.Border, Settings.Colors.AccentColor);
+				//ImGui.PushStyleColor(ImGuiCol.PopupBg, Settings.Colors.BgColor);
+				//ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, 1.5f);
+				//if (ImGui.BeginPopupModal("Switch Account", ref acct, ImGuiWindowFlags.AlwaysAutoResize | ImGuiWindowFlags.NoDecoration | ImGuiWindowFlags.NoTitleBar))
+				//{
+				//	ImGui.Spacing();
+				//	Drawing.TextCentered($"Are you sure you want to switch accounts?");
+				//	ImGui.Spacing();
+				//	ImGui.SetCursorPos(new Vector2((ImGui.GetWindowSize().X - 68) * 0.3f, ImGui.GetCursorPosY()));
+				//	if (ImGui.Button("Yes", new(68, 28)))
+				//	{
+				//		Application.Restart();
+				//		Environment.Exit(0);
+				//	}
+				//	ImGui.SameLine();
+				//	ImGui.SetCursorPos(new Vector2((ImGui.GetWindowSize().X - 68) * 0.6f, ImGui.GetCursorPosY()));
+				//	if (ImGui.Button("No", new(68, 28)))
+				//	{
+				//		ImGui.CloseCurrentPopup();
+				//	}
+				//	ImGui.Spacing();
 
-					ImGui.EndPopup();
-				}
-				ImGui.PopStyleColor();
-				ImGui.PopStyleColor();
-				ImGui.PopStyleVar();
+				//	ImGui.EndPopup();
+				//}
+				//ImGui.PopStyleColor();
+				//ImGui.PopStyleColor();
+				//ImGui.PopStyleVar();
 
 				ImGui.EndTabItem();
 			}

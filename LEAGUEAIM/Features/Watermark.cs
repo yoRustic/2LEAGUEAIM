@@ -23,9 +23,6 @@ namespace LEAGUEAIM.Features
 				// build overlay text
 				string overlayText = $"LEAGUEAIM.gg{delimitor}";
 
-				if (Program._XFUser != null)
-					overlayText += $"{Program._XFUser.Username}{delimitor}";
-
 				overlayText += $"{DateTime.Now:hh:mm tt}";
 
 				if (Profiles.CurrentProfile != "None")

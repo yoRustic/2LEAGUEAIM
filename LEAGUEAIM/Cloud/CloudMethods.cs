@@ -18,7 +18,7 @@ namespace Script_Engine.Cloud
 			var content = new FormUrlEncodedContent(new[]
 			{
 				new KeyValuePair<string, string>("REQUEST_TYPE", "LIST"),
-				new KeyValuePair<string, string>("REQUEST_USER", Program._XFUser.Username),
+				new KeyValuePair<string, string>("REQUEST_USER", ""),
 				new KeyValuePair<string, string>("DATA_TYPE", type),
 				new KeyValuePair<string, string>("DATA_ID", 0.ToString()),
 			});
@@ -95,7 +95,7 @@ namespace Script_Engine.Cloud
 			var content = new FormUrlEncodedContent(new[]
 			{
 				new KeyValuePair<string, string>("REQUEST_TYPE", "COMM"),
-				new KeyValuePair<string, string>("REQUEST_USER", Program._XFUser.Username),
+				new KeyValuePair<string, string>("REQUEST_USER", ""),
 			});
 
 			// send the post request to the endpoint
@@ -155,7 +155,7 @@ namespace Script_Engine.Cloud
 			var content = new FormUrlEncodedContent(new[]
 			{
 				new KeyValuePair<string, string>("REQUEST_TYPE", "SET"),
-				new KeyValuePair<string, string>("REQUEST_USER", Program._XFUser.Username),
+				new KeyValuePair<string, string>("REQUEST_USER", ""),
 				new KeyValuePair<string, string>("DATA_TYPE", type),
 				new KeyValuePair<string, string>("DATA_NAME", name),
 				new KeyValuePair<string, string>("DATA_DATA", data),
@@ -185,7 +185,7 @@ namespace Script_Engine.Cloud
 			var content = new FormUrlEncodedContent(new[]
 			{
 				new KeyValuePair<string, string>("REQUEST_TYPE", "REM"),
-				new KeyValuePair<string, string>("REQUEST_USER", Program._XFUser.Username),
+				new KeyValuePair<string, string>("REQUEST_USER", ""),
 				new KeyValuePair<string, string>("DATA_TYPE", type),
 				new KeyValuePair<string, string>("DATA_ID", id.ToString()),
 			});
@@ -211,7 +211,7 @@ namespace Script_Engine.Cloud
 			var content = new FormUrlEncodedContent(new[]
 			{
 				new KeyValuePair<string, string>("REQUEST_TYPE", "CHECK"),
-				new KeyValuePair<string, string>("REQUEST_USER", Program._XFUser.Username),
+				new KeyValuePair<string, string>("REQUEST_USER", ""),
 				new KeyValuePair<string, string>("DATA_TYPE", type),
 				new KeyValuePair<string, string>("DATA_ID", id.ToString()),
 			});
@@ -235,7 +235,7 @@ namespace Script_Engine.Cloud
 			var content = new FormUrlEncodedContent(new[]
 			{
 				new KeyValuePair<string, string>("REQUEST_TYPE", "VOTE"),
-				new KeyValuePair<string, string>("REQUEST_USER", Program._XFUser.Username),
+				new KeyValuePair<string, string>("REQUEST_USER", ""),
 				new KeyValuePair<string, string>("DATA_TYPE", type),
 				new KeyValuePair<string, string>("DATA_ID", id.ToString()),
 			});

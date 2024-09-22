@@ -1,9 +1,6 @@
 ﻿using LEAGUEAIM.Features;
-using LEAGUEAIM.Protections;
 using LEAGUEAIM.Utilities;
 using Script_Engine.Utilities;
-using XenForo.NET;
-using XenForo.NET.Models;
 
 namespace LEAGUEAIM
 {
@@ -12,9 +9,6 @@ namespace LEAGUEAIM
 		public static LARenderer Renderer;
 		public static DateTime StartTime;
 		public static Size ScreenSize;
-		public static readonly XenForoConfig _Config = new($"{Settings.API.BaseUri}/x-api/", Settings.API.ClientId, Settings.API.ClientSecret);
-		public static XenForoApi _XF;
-		public static User _XFUser;
 
 		[STAThread]
 		public static void Main(string[] args)
@@ -28,8 +22,6 @@ namespace LEAGUEAIM
 			MenuSettings.LoadKeybinds();
 
 			Recoil.CreatePatternsDirectory();
-
-			_XF = new(_Config);
 
 			try
 			{

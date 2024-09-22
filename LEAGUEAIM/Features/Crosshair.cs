@@ -96,7 +96,7 @@ namespace LEAGUEAIM.Features
 				if (HideOnADS && (User32.GetAsyncKeyState(Keys.RButton) || (Settings.Controller.FlippedTriggers ? ControllerInput.IsKeyPressed(ControllerInput.ControllerKeys.LeftShoulder) : ControllerInput.IsTriggerHeld(ControllerInput.ControllerTrigger.Left)))) return;
 
 				if (CenterDot)
-					drawList.AddEllipseFilled(new(x, y), DotSize, DotSize, crosshairColor);
+					drawList.AddEllipseFilled(new(x, y), new(DotSize, DotSize), crosshairColor);
 
 				switch (Style)
 				{
@@ -157,7 +157,7 @@ namespace LEAGUEAIM.Features
 						drawList.AddCircle(new Vector2(x, y), Size, crosshairColor, 0, Thickness);
 						break;
 					case 5:
-						drawList.AddEllipseFilled(new(x, y), Size, Size, crosshairColor);
+						drawList.AddEllipseFilled(new(x, y), new(Size, Size), crosshairColor);
 						break;
 				}
 			}

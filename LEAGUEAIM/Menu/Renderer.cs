@@ -95,7 +95,7 @@ namespace LEAGUEAIM
 
 			Vector4 bCol = Settings.Colors.FrameColor;
 			style.Colors[(int)ImGuiCol.Tab] = bCol;
-			style.Colors[(int)ImGuiCol.TabActive] = new Vector4(bCol.X, bCol.Y, bCol.Z, 0.2f);
+			style.Colors[(int)ImGuiCol.TabSelected] = new Vector4(bCol.X, bCol.Y, bCol.Z, 0.2f);
 			style.Colors[(int)ImGuiCol.TabHovered] = new Vector4(bCol.X, bCol.Y, bCol.Z, 0.4f);
 
 		}
