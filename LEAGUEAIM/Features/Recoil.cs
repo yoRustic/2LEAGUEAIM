@@ -238,11 +238,11 @@ namespace LEAGUEAIM.Features
 			{
 				ImGui.OpenPopup("Delete Pattern");
 			}
-			if (Drawing.IconButton("Send to Cloud", IconFonts.FontAwesome6.Upload, new(Settings.ButtonSizes.Full, 28), true, ImGui.GetStyle().FrameRounding, 0))
-			{
-				if (GetPatterns()[0] != "No Patterns Found")
-					ImGui.OpenPopup("Upload Pattern");
-			}
+			//if (Drawing.IconButton("Send to Cloud", IconFonts.FontAwesome6.Upload, new(Settings.ButtonSizes.Full, 28), true, ImGui.GetStyle().FrameRounding, 0))
+			//{
+			//	if (GetPatterns()[0] != "No Patterns Found")
+			//		ImGui.OpenPopup("Upload Pattern");
+			//}
 
 			Vector2 cMenuPos;
 			Vector2 cMenuSize;

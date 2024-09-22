@@ -219,10 +219,10 @@ namespace LEAGUEAIM
 					ImGui.OpenPopup("Settings Loaded");
 				}
 
-				if (Drawing.IconButton("Switch Account", IconFonts.FontAwesome6.Users, new(Settings.ButtonSizes.Full, 28), true, ImGui.GetStyle().FrameRounding, 0))
-				{
-					ImGui.OpenPopup("Switch Account");
-				}
+				//if (Drawing.IconButton("Switch Account", IconFonts.FontAwesome6.Users, new(Settings.ButtonSizes.Full, 28), true, ImGui.GetStyle().FrameRounding, 0))
+				//{
+				//	ImGui.OpenPopup("Switch Account");
+				//}
 
 				bool saved = true;
 				ImGui.SetNextWindowPos(new(cMenuPos.X + (cMenuSize.X / 2) - 150, cMenuPos.Y + (cMenuSize.Y / 2) - 55));
@@ -367,10 +367,10 @@ namespace LEAGUEAIM
 				{
 					ImGui.OpenPopup("Delete Style");
 				}
-				if (Drawing.IconButton("Send to Cloud", IconFonts.FontAwesome6.Upload, new(Settings.ButtonSizes.Full, 28), true, ImGui.GetStyle().FrameRounding, 0))
-				{
-					ImGui.OpenPopup("Upload Style");
-				}
+				//if (Drawing.IconButton("Send to Cloud", IconFonts.FontAwesome6.Upload, new(Settings.ButtonSizes.Full, 28), true, ImGui.GetStyle().FrameRounding, 0))
+				//{
+				//	ImGui.OpenPopup("Upload Style");
+				//}
 
 				ImGui.InputText("##STYLENAME", ref Settings.Menu.NewStyleName, 32, ImGuiInputTextFlags.EnterReturnsTrue);
 				if (Drawing.IconButton("Create New Style", IconFonts.FontAwesome6.Pencil, new(Settings.ButtonSizes.Full, 28), true, ImGui.GetStyle().FrameRounding, 0))

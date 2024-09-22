@@ -159,11 +159,11 @@ namespace LEAGUEAIM.Features
 				if (Settings.Lua.CurrentScript > -1)
 					ImGui.OpenPopup("Delete Script");
 			}
-			if (Drawing.IconButton("Send to Cloud", IconFonts.FontAwesome6.Upload, new(Settings.ButtonSizes.Full, 28), true, ImGui.GetStyle().FrameRounding, 0))
-			{
-				if (Settings.Lua.CurrentScript > -1)
-					ImGui.OpenPopup("Upload Script");
-			}
+			//if (Drawing.IconButton("Send to Cloud", IconFonts.FontAwesome6.Upload, new(Settings.ButtonSizes.Full, 28), true, ImGui.GetStyle().FrameRounding, 0))
+			//{
+			//	if (Settings.Lua.CurrentScript > -1)
+			//		ImGui.OpenPopup("Upload Script");
+			//}
 			ImGui.Separator();
 			ImGui.Text("Console");
 			string console = LEAGUEAIM.Engine.Logs.Output.SpliceText(50);
