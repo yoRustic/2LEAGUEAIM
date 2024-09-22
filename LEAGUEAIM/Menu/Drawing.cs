@@ -24,27 +24,29 @@ namespace LEAGUEAIM.Utilities
 			ImGui.SetCursorPosY(ImGui.GetCursorPosY() - 42);
 			ImGui.SetCursorPosX(ImGui.GetContentRegionAvail().X - 17);
 			Vector2 p_min = CircleImage(path, diameter);
-			//if (ImGui.IsItemHovered())
-			//{
-			//	ImGui.GetWindowDrawList().AddCircle(new(p_min.X + (diameter * 0.5f), p_min.Y + (diameter * 0.5f)), diameter * 0.5f, Settings.Colors.AccentColor.ToUInt32(), 0, 1.5f);
-			//	ImGui.SetMouseCursor(ImGuiMouseCursor.Hand);
-			//	ImGui.PushStyleColor(ImGuiCol.Border, Settings.Colors.AccentColor);
-			//	ImGui.PushStyleColor(ImGuiCol.PopupBg, Settings.Colors.BgColor);
-			//	ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, 1.5f);
-			//	if (ImGui.BeginItemTooltip())
-			//	{
-			//		ImGui.PushFont(Fonts.MenuLg);
-			//		ImGui.TextColored(Settings.Colors.AccentColor, Program._XFUser.Username);
-			//		ImGui.PopFont();
-			//		ImGui.PushFont(Fonts.MenuSm);
-			//		ImGui.Text("Open LEAGUEAIM cloud storage.");
-			//		ImGui.PopFont();
-			//		ImGui.EndTooltip();
-			//	}
-			//	ImGui.PopStyleVar();
-			//	ImGui.PopStyleColor();
-			//	ImGui.PopStyleColor();
-			//}
+			if (ImGui.IsItemHovered())
+			{
+				ImGui.GetWindowDrawList().AddCircle(new(p_min.X + (diameter * 0.5f), p_min.Y + (diameter * 0.5f)), diameter * 0.5f, Settings.Colors.AccentColor.ToUInt32(), 0, 1.5f);
+				ImGui.SetMouseCursor(ImGuiMouseCursor.Hand);
+				ImGui.PushStyleColor(ImGuiCol.Border, Settings.Colors.AccentColor);
+				ImGui.PushStyleColor(ImGuiCol.PopupBg, Settings.Colors.BgColor);
+				ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, 1.5f);
+				if (ImGui.BeginItemTooltip())
+				{
+					ImGui.PushFont(Fonts.MenuLg);
+                    ImGui.TextColored(Settings.Colors.AccentColor, "Temporarily disabled");
+                    //ImGui.TextColored(Settings.Colors.AccentColor, Program._XFUser.Username);
+                    ImGui.PopFont();
+					ImGui.PushFont(Fonts.MenuSm);
+                    ImGui.Text("or maybe not who knows");
+                    //ImGui.Text("Open LEAGUEAIM cloud storage.");
+					ImGui.PopFont();
+					ImGui.EndTooltip();
+				}
+				ImGui.PopStyleVar();
+				ImGui.PopStyleColor();
+				ImGui.PopStyleColor();
+			}
 			return ImGui.IsItemClicked();
 		}
 		public static Vector2 CircleImage(string path, float diameter)
