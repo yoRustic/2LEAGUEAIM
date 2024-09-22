@@ -11,7 +11,7 @@ namespace LEAGUEAIM
 		}
 		public static class API
 		{
-			public static string BaseUri = "https://imbypass.pw/";
+			public static string BaseUri = "http://yorustic.ovh/LEAGUEAIM";
 			public static string ClientId = "";
 			public static string ClientSecret = "";
 		}

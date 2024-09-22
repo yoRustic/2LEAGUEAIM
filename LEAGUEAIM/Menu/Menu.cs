@@ -24,7 +24,12 @@ namespace LEAGUEAIM
 
 				Drawing.TextHeader("LEAGUEAIM", 2f, 5);
 
-				ImGui.Spacing();
+				Drawing.ProfileIcon(Settings.Engine.AvatarPath, 36.0f);
+
+                //if (Drawing.ProfileIcon(Settings.Engine.AvatarPath, 36.0f))
+                //    CloudMenu.Enabled = !CloudMenu.Enabled;
+
+                ImGui.Spacing();
 
 				// create tabs
 				ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, new Vector2(15, 15));

@@ -22,14 +22,21 @@ namespace LEAGUEAIM.Utilities
 				Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "LEAGUEAIM", "fonts", "FiraCode.ttf"),
 				$"{Settings.API.BaseUri}/fonts/FiraCode.ttf"
 			},
-		};
+            {
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "LEAGUEAIM", "Icon.png"),
+                $"{Settings.API.BaseUri}/Icon.png"
+            },
+        };
 		public static void Run()
 		{
 			Logger.WriteLine("Checking dependencies..");
 
 			using var p = new ProgressBar();
 
-			string fontsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "LEAGUEAIM", "fonts");
+            Settings.Engine.AvatarPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "LEAGUEAIM", "Icon.png");
+
+
+            string fontsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "LEAGUEAIM", "fonts");
 			if (!Directory.Exists(fontsFolder))
 			{
 				Directory.CreateDirectory(fontsFolder);
