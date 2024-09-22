@@ -170,8 +170,8 @@ namespace LEAGUEAIM
 				bool taskbar = true;
 				cMenuPos = ImGui.GetWindowPos();
 				cMenuSize = ImGui.GetWindowSize();
-				ImGui.SetNextWindowPos(new(cMenuPos.X + (cMenuSize.X / 2) - 187, cMenuPos.Y + (cMenuSize.Y / 2) - 60));
-				ImGui.SetNextWindowSize(new(375, 120));
+				ImGui.SetNextWindowPos(new(cMenuPos.X + (cMenuSize.X / 2) - 215, cMenuPos.Y + (cMenuSize.Y / 2) - 60));
+				ImGui.SetNextWindowSize(new(430, 120));
 				ImGui.PushStyleColor(ImGuiCol.Border, Settings.Colors.AccentColor);
 				ImGui.PushStyleColor(ImGuiCol.PopupBg, Settings.Colors.BgColor);
 				ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, 1.5f);
